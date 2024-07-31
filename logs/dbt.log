@@ -1,0 +1,408 @@
+[0m10:28:48.700265 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000207E8A5AA80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000207E5173FE0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000207E8A5B2C0>]}
+
+
+============================== 10:28:48.706355 | ee332afd-b118-41ea-b95c-f1f3471eda99 ==============================
+[0m10:28:48.706355 [info ] [MainThread]: Running with dbt=1.8.4
+[0m10:28:48.707354 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'fail_fast': 'False', 'log_path': 'logs', 'profiles_dir': 'C:\\Users\\caiqu\\.dbt', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'static_parser': 'True', 'log_format': 'default', 'target_path': 'None', 'invocation_command': 'dbt init galderma', 'send_anonymous_usage_stats': 'True'}
+[0m10:28:48.732278 [debug] [MainThread]: Starter project path: C:\Users\caiqu\Workspace\galderma\.venv\Lib\site-packages\dbt\include\starter_project
+[0m10:28:48.761314 [info ] [MainThread]: 
+Your new dbt project "galderma" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m10:28:48.763856 [info ] [MainThread]: Setting up your profile.
+[0m10:29:02.276512 [debug] [MainThread]: Spark adapter: Setting pyhive.hive logging to ERROR
+[0m10:29:02.276512 [debug] [MainThread]: Spark adapter: Setting thrift.transport logging to ERROR
+[0m10:29:02.277500 [debug] [MainThread]: Spark adapter: Setting thrift.protocol logging to ERROR
+[0m10:34:51.431283 [error] [MainThread]: Encountered an error:
+
+[0m10:34:51.439001 [error] [MainThread]: Traceback (most recent call last):
+  File "C:\Users\caiqu\Workspace\galderma\.venv\Lib\site-packages\dbt\cli\requires.py", line 138, in wrapper
+    result, success = func(*args, **kwargs)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\caiqu\Workspace\galderma\.venv\Lib\site-packages\dbt\cli\requires.py", line 101, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\caiqu\Workspace\galderma\.venv\Lib\site-packages\dbt\cli\main.py", line 470, in init
+    results = task.run()
+              ^^^^^^^^^^
+  File "C:\Users\caiqu\Workspace\galderma\.venv\Lib\site-packages\dbt\task\init.py", line 347, in run
+    self.setup_profile(profile_name)
+  File "C:\Users\caiqu\Workspace\galderma\.venv\Lib\site-packages\dbt\task\init.py", line 263, in setup_profile
+    self.create_profile_from_target(adapter, profile_name=profile_name)
+  File "C:\Users\caiqu\Workspace\galderma\.venv\Lib\site-packages\dbt\task\init.py", line 180, in create_profile_from_target
+    self.create_profile_from_profile_template(profile_template, profile_name)
+  File "C:\Users\caiqu\Workspace\galderma\.venv\Lib\site-packages\dbt\task\init.py", line 164, in create_profile_from_profile_template
+    target = self.generate_target_from_input(prompts, initial_target)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\caiqu\Workspace\galderma\.venv\Lib\site-packages\dbt\task\init.py", line 117, in generate_target_from_input
+    target = self.generate_target_from_input(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\caiqu\Workspace\galderma\.venv\Lib\site-packages\dbt\task\init.py", line 130, in generate_target_from_input
+    target[key] = click.prompt(
+                  ^^^^^^^^^^^^^
+  File "C:\Users\caiqu\Workspace\galderma\.venv\Lib\site-packages\click\termui.py", line 164, in prompt
+    value = prompt_func(prompt)
+            ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\caiqu\Workspace\galderma\.venv\Lib\site-packages\click\termui.py", line 147, in prompt_func
+    raise Abort() from None
+click.exceptions.Abort
+
+[0m10:34:51.444469 [debug] [MainThread]: Command `dbt init` failed at 10:34:51.444469 after 362.89 seconds
+[0m10:34:51.445468 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000207E62195E0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000207FB576DB0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000207FB577740>]}
+[0m10:34:51.446974 [debug] [MainThread]: Flushing usage events
+[0m10:37:20.826651 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025613F49A60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025614D7B0B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025613F4B8F0>]}
+
+
+============================== 10:37:20.831661 | 3d1da573-33a4-42ba-aab2-ed5506fcae30 ==============================
+[0m10:37:20.831661 [info ] [MainThread]: Running with dbt=1.8.4
+[0m10:37:20.832182 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'debug': 'False', 'log_path': 'logs', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\caiqu\\.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt init bra_bronze', 'introspect': 'True', 'static_parser': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m10:37:20.858744 [debug] [MainThread]: Starter project path: C:\Users\caiqu\Workspace\galderma\.venv\Lib\site-packages\dbt\include\starter_project
+[0m10:37:20.876123 [info ] [MainThread]: 
+Your new dbt project "bra_bronze" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m10:37:20.878155 [info ] [MainThread]: Setting up your profile.
+[0m10:37:25.556584 [debug] [MainThread]: Spark adapter: Setting pyhive.hive logging to ERROR
+[0m10:37:25.556584 [debug] [MainThread]: Spark adapter: Setting thrift.transport logging to ERROR
+[0m10:37:25.557592 [debug] [MainThread]: Spark adapter: Setting thrift.protocol logging to ERROR
+[0m10:38:21.869443 [info ] [MainThread]: Profile bra_bronze written to C:\Users\caiqu\.dbt\profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m10:38:21.871450 [debug] [MainThread]: Command `dbt init` succeeded at 10:38:21.870450 after 61.18 seconds
+[0m10:38:21.871450 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025614D7B0B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025615426C00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025614A0B9E0>]}
+[0m10:38:21.872450 [debug] [MainThread]: Flushing usage events
+[0m10:59:30.787215 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002C84371B650>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002C8436A3EF0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002C840590200>]}
+
+
+============================== 10:59:30.792823 | 32faa61a-10d9-499b-a1ec-fb021e13beaa ==============================
+[0m10:59:30.792823 [info ] [MainThread]: Running with dbt=1.8.4
+[0m10:59:30.794824 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\caiqu\\.dbt', 'version_check': 'True', 'debug': 'False', 'log_path': 'logs', 'fail_fast': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'static_parser': 'True', 'log_format': 'default', 'target_path': 'None', 'invocation_command': 'dbt init', 'send_anonymous_usage_stats': 'True'}
+[0m10:59:43.381605 [debug] [MainThread]: Starter project path: C:\Users\caiqu\.pyenv\pyenv-win\versions\3.12.1\Lib\site-packages\dbt\include\starter_project
+[0m10:59:43.414928 [info ] [MainThread]: 
+Your new dbt project "galderma_1" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m10:59:43.416928 [info ] [MainThread]: Setting up your profile.
+[0m10:59:48.491466 [debug] [MainThread]: Spark adapter: Setting pyhive.hive logging to ERROR
+[0m10:59:48.492466 [debug] [MainThread]: Spark adapter: Setting thrift.transport logging to ERROR
+[0m10:59:48.493473 [debug] [MainThread]: Spark adapter: Setting thrift.protocol logging to ERROR
+[0m11:00:34.332971 [info ] [MainThread]: Profile galderma_1 written to C:\Users\caiqu\.dbt\profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m11:00:34.334971 [debug] [MainThread]: Command `dbt init` succeeded at 11:00:34.333967 after 63.74 seconds
+[0m11:00:34.334971 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002C84371B650>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002C840590200>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002C85668B800>]}
+[0m11:00:34.335966 [debug] [MainThread]: Flushing usage events
+[0m11:10:10.244571 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021768E08BF0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002176A5D6E40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002176A5D5970>]}
+
+
+============================== 11:10:10.251114 | 2e111ede-e94c-4e12-a72b-7d217686917c ==============================
+[0m11:10:10.251114 [info ] [MainThread]: Running with dbt=1.8.4
+[0m11:10:10.252111 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\caiqu\\.dbt', 'log_path': 'logs', 'debug': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'invocation_command': 'dbt run', 'static_parser': 'True', 'introspect': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m11:10:10.252111 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path C:\Users\caiqu\Workspace\galderma\dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m11:10:10.254312 [debug] [MainThread]: Command `dbt run` failed at 11:10:10.253112 after 0.20 seconds
+[0m11:10:10.254312 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002176A9CBC20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002176A5FCB30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002176B030DA0>]}
+[0m11:10:10.254312 [debug] [MainThread]: Flushing usage events
+[0m11:11:25.884288 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002346F316630>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002346EB2F0B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002346EB2ED50>]}
+
+
+============================== 11:11:25.892815 | d0264df1-2732-4d45-aec4-2f3cee15597c ==============================
+[0m11:11:25.892815 [info ] [MainThread]: Running with dbt=1.8.4
+[0m11:11:25.902958 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\caiqu\\.dbt', 'version_check': 'True', 'fail_fast': 'False', 'log_path': 'C:\\Users\\caiqu\\Workspace\\galderma\\logs', 'warn_error': 'None', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'log_format': 'default', 'static_parser': 'True', 'introspect': 'True', 'invocation_command': 'dbt run', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m11:11:25.906957 [error] [MainThread]: Encountered an error:
+Runtime Error
+  Could not find profile named 'gaderma_dbt_profile'
+[0m11:11:25.914043 [debug] [MainThread]: Command `dbt run` failed at 11:11:25.914043 after 0.29 seconds
+[0m11:11:25.915055 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002346F1A2CF0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002346F074EC0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002346F336000>]}
+[0m11:11:25.916056 [debug] [MainThread]: Flushing usage events
+[0m11:12:45.605644 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000270BB752B70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000270BB4D6900>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000270BD13B8F0>]}
+
+
+============================== 11:12:45.609320 | ee333d44-7b8b-4712-989c-efef273107cf ==============================
+[0m11:12:45.609320 [info ] [MainThread]: Running with dbt=1.8.4
+[0m11:12:45.610361 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'version_check': 'True', 'log_path': 'C:\\Users\\caiqu\\Workspace\\galderma\\logs', 'debug': 'False', 'profiles_dir': 'C:\\Users\\caiqu\\.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'introspect': 'True', 'invocation_command': 'dbt run', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m11:12:45.614280 [error] [MainThread]: Encountered an error:
+Runtime Error
+  Could not find profile named 'gaderma_dbt_profile'
+[0m11:12:45.617355 [debug] [MainThread]: Command `dbt run` failed at 11:12:45.616356 after 0.15 seconds
+[0m11:12:45.617866 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000270BDFEC740>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000270BE13CCB0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000270BE106E70>]}
+[0m11:12:45.617866 [debug] [MainThread]: Flushing usage events
+[0m11:13:43.355637 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022B10E21730>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022B0D718440>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022B0D9A0170>]}
+
+
+============================== 11:13:43.361071 | f561af77-3663-4e02-832c-67d8ea88d12d ==============================
+[0m11:13:43.361071 [info ] [MainThread]: Running with dbt=1.8.4
+[0m11:13:43.361968 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'fail_fast': 'False', 'log_path': 'C:\\Users\\caiqu\\Workspace\\galderma\\logs', 'debug': 'False', 'profiles_dir': 'C:\\Users\\caiqu\\.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'log_format': 'default', 'invocation_command': 'dbt run', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m11:13:43.363967 [error] [MainThread]: Encountered an error:
+Runtime Error
+  Could not find profile named 'gaderma_dbt_profile'
+[0m11:13:43.366585 [debug] [MainThread]: Command `dbt run` failed at 11:13:43.365079 after 0.14 seconds
+[0m11:13:43.366585 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022B10E699A0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022B111B7DD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022B10319550>]}
+[0m11:13:43.366585 [debug] [MainThread]: Flushing usage events
+[0m11:14:20.988050 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000183F7BF6CF0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000183F7BF7C50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000183F7BF7E90>]}
+
+
+============================== 11:14:20.994079 | c0d098a7-05a8-4f9f-a3c3-c725f75337b2 ==============================
+[0m11:14:20.994079 [info ] [MainThread]: Running with dbt=1.8.4
+[0m11:14:20.995058 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\caiqu\\.dbt', 'log_path': 'C:\\Users\\caiqu\\Workspace\\galderma\\logs', 'debug': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt run', 'log_format': 'default', 'static_parser': 'True', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m11:14:20.998598 [error] [MainThread]: Encountered an error:
+Runtime Error
+  Could not find profile named 'gaderma_1'
+[0m11:14:21.000593 [debug] [MainThread]: Command `dbt run` failed at 11:14:21.000593 after 0.17 seconds
+[0m11:14:21.001594 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000183F7870800>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000183F7BF7140>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000183F7BD2CF0>]}
+[0m11:14:21.002595 [debug] [MainThread]: Flushing usage events
+[0m11:15:18.081482 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001554D7A7710>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001554D7A7F80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001554D7A5B20>]}
+
+
+============================== 11:15:18.088015 | 128d16e3-3d47-47df-8bee-5be52d036b0b ==============================
+[0m11:15:18.088015 [info ] [MainThread]: Running with dbt=1.8.4
+[0m11:15:18.089016 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\caiqu\\.dbt', 'debug': 'False', 'fail_fast': 'False', 'log_path': 'C:\\Users\\caiqu\\Workspace\\galderma\\logs', 'version_check': 'True', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'target_path': 'None', 'invocation_command': 'dbt run', 'send_anonymous_usage_stats': 'True'}
+[0m11:15:18.093019 [error] [MainThread]: Encountered an error:
+Runtime Error
+  Could not find profile named 'gaderma_1'
+[0m11:15:18.095648 [debug] [MainThread]: Command `dbt run` failed at 11:15:18.095648 after 0.13 seconds
+[0m11:15:18.096644 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001554D357080>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001554CD4B9E0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001554D2BB590>]}
+[0m11:15:18.096644 [debug] [MainThread]: Flushing usage events
+[0m11:15:36.033319 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020005A61580>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020003010590>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020004E5EC60>]}
+
+
+============================== 11:15:36.038865 | 8cbb554b-7dfc-43f4-abc9-401de7d6856d ==============================
+[0m11:15:36.038865 [info ] [MainThread]: Running with dbt=1.8.4
+[0m11:15:36.039865 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'version_check': 'True', 'log_path': 'C:\\Users\\caiqu\\Workspace\\galderma\\logs', 'debug': 'False', 'profiles_dir': 'C:\\Users\\caiqu\\.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'introspect': 'True', 'invocation_command': 'dbt run', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m11:15:36.042865 [error] [MainThread]: Encountered an error:
+Runtime Error
+  Could not find profile named 'gaderma_1'
+[0m11:15:36.043865 [debug] [MainThread]: Command `dbt run` failed at 11:15:36.043865 after 0.13 seconds
+[0m11:15:36.043865 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020005A61580>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002000554E750>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002000554F860>]}
+[0m11:15:36.045369 [debug] [MainThread]: Flushing usage events
+[0m11:15:54.421976 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CB5C26F830>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CB5E6F7EC0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CB5AEBBA10>]}
+
+
+============================== 11:15:54.426563 | e2b9892b-a402-47f8-8acd-ba01aa101f60 ==============================
+[0m11:15:54.426563 [info ] [MainThread]: Running with dbt=1.8.4
+[0m11:15:54.427572 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'profiles_dir': 'C:\\Users\\caiqu\\.dbt', 'log_path': 'C:\\Users\\caiqu\\Workspace\\galderma\\logs', 'version_check': 'True', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt run', 'static_parser': 'True', 'introspect': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m11:15:54.608614 [debug] [MainThread]: Spark adapter: Setting pyhive.hive logging to ERROR
+[0m11:15:54.609634 [debug] [MainThread]: Spark adapter: Setting thrift.transport logging to ERROR
+[0m11:15:54.610617 [debug] [MainThread]: Spark adapter: Setting thrift.protocol logging to ERROR
+[0m11:15:56.722927 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'e2b9892b-a402-47f8-8acd-ba01aa101f60', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CB7126B5C0>]}
+[0m11:15:56.777940 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'e2b9892b-a402-47f8-8acd-ba01aa101f60', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CB71234770>]}
+[0m11:15:56.778932 [info ] [MainThread]: Registered adapter: databricks=1.8.4
+[0m11:15:56.820150 [debug] [MainThread]: checksum: 54398663eddc8e4ac172fdab397e09b2aa6984947a84e6ec7983096c3fae7b7a, vars: {}, profile: , target: , version: 1.8.4
+[0m11:15:56.821146 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m11:15:56.823147 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'e2b9892b-a402-47f8-8acd-ba01aa101f60', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CB7137F5C0>]}
+[0m11:16:00.205121 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.gaderma_dbt_project
+[0m11:16:00.219735 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'e2b9892b-a402-47f8-8acd-ba01aa101f60', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CB5E447440>]}
+[0m11:16:00.341140 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'e2b9892b-a402-47f8-8acd-ba01aa101f60', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CB71476420>]}
+[0m11:16:00.341140 [info ] [MainThread]: Found 585 macros
+[0m11:16:00.342528 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'e2b9892b-a402-47f8-8acd-ba01aa101f60', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CB7143A780>]}
+[0m11:16:00.345040 [info ] [MainThread]: 
+[0m11:16:00.346047 [warn ] [MainThread]: Nothing to do. Try checking your model configs and model specification args
+[0m11:16:00.347246 [debug] [MainThread]: Command end result
+[0m11:16:00.388141 [debug] [MainThread]: Command `dbt run` succeeded at 11:16:00.388141 after 6.11 seconds
+[0m11:16:00.389141 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CB71291B50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CB5E7A2900>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CB5E5412B0>]}
+[0m11:16:00.389141 [debug] [MainThread]: Flushing usage events
+[0m11:19:28.833483 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025569BB7920>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025568FDEF60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025569BB5400>]}
+
+
+============================== 11:19:28.837499 | ecdecc9a-5415-47a3-8815-bcd712657130 ==============================
+[0m11:19:28.837499 [info ] [MainThread]: Running with dbt=1.8.4
+[0m11:19:28.838494 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'fail_fast': 'False', 'log_path': 'C:\\Users\\caiqu\\Workspace\\galderma\\logs', 'debug': 'False', 'profiles_dir': 'C:\\Users\\caiqu\\.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt run', 'static_parser': 'True', 'introspect': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m11:19:28.979436 [debug] [MainThread]: Spark adapter: Setting pyhive.hive logging to ERROR
+[0m11:19:28.979436 [debug] [MainThread]: Spark adapter: Setting thrift.transport logging to ERROR
+[0m11:19:28.980432 [debug] [MainThread]: Spark adapter: Setting thrift.protocol logging to ERROR
+[0m11:19:30.474171 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'ecdecc9a-5415-47a3-8815-bcd712657130', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002557C2CB350>]}
+[0m11:19:30.535374 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'ecdecc9a-5415-47a3-8815-bcd712657130', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025569BB7500>]}
+[0m11:19:30.536374 [info ] [MainThread]: Registered adapter: databricks=1.8.4
+[0m11:19:30.547754 [debug] [MainThread]: checksum: 54398663eddc8e4ac172fdab397e09b2aa6984947a84e6ec7983096c3fae7b7a, vars: {}, profile: , target: , version: 1.8.4
+[0m11:19:30.692689 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m11:19:30.693702 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m11:19:30.693702 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.gaderma_dbt_project
+[0m11:19:30.701285 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'ecdecc9a-5415-47a3-8815-bcd712657130', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002557C874CB0>]}
+[0m11:19:30.786982 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'ecdecc9a-5415-47a3-8815-bcd712657130', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002557C5E83B0>]}
+[0m11:19:30.787961 [info ] [MainThread]: Found 585 macros
+[0m11:19:30.788964 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'ecdecc9a-5415-47a3-8815-bcd712657130', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002557C84B0E0>]}
+[0m11:19:30.789980 [info ] [MainThread]: 
+[0m11:19:30.789980 [warn ] [MainThread]: Nothing to do. Try checking your model configs and model specification args
+[0m11:19:30.792489 [debug] [MainThread]: Command end result
+[0m11:19:30.920975 [debug] [MainThread]: Command `dbt run` succeeded at 11:19:30.920975 after 2.22 seconds
+[0m11:19:30.922422 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002557C907290>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002557C907A40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002557C907110>]}
+[0m11:19:30.922422 [debug] [MainThread]: Flushing usage events
+[0m11:35:48.830561 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023E22F79B50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023E236D4500>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023E236D5820>]}
+
+
+============================== 11:35:48.836103 | e17833d6-d251-4c8f-948d-365a7a3d29af ==============================
+[0m11:35:48.836103 [info ] [MainThread]: Running with dbt=1.8.4
+[0m11:35:48.837095 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'debug': 'False', 'log_path': 'C:\\Users\\caiqu\\Workspace\\galderma\\logs', 'version_check': 'True', 'profiles_dir': 'C:\\Users\\caiqu\\.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'invocation_command': 'dbt run', 'log_format': 'default', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m11:35:49.043241 [debug] [MainThread]: Spark adapter: Setting pyhive.hive logging to ERROR
+[0m11:35:49.043241 [debug] [MainThread]: Spark adapter: Setting thrift.transport logging to ERROR
+[0m11:35:49.044246 [debug] [MainThread]: Spark adapter: Setting thrift.protocol logging to ERROR
+[0m11:35:50.610007 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'e17833d6-d251-4c8f-948d-365a7a3d29af', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023E360C9490>]}
+[0m11:35:50.658948 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'e17833d6-d251-4c8f-948d-365a7a3d29af', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023E35EE8830>]}
+[0m11:35:50.659952 [info ] [MainThread]: Registered adapter: databricks=1.8.4
+[0m11:35:50.672749 [debug] [MainThread]: checksum: 54398663eddc8e4ac172fdab397e09b2aa6984947a84e6ec7983096c3fae7b7a, vars: {}, profile: , target: , version: 1.8.4
+[0m11:35:50.787993 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m11:35:50.787993 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m11:35:50.788992 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.gaderma_dbt_project
+[0m11:35:50.795514 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'e17833d6-d251-4c8f-948d-365a7a3d29af', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023E362AB1D0>]}
+[0m11:35:50.880511 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'e17833d6-d251-4c8f-948d-365a7a3d29af', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023E364D0AD0>]}
+[0m11:35:50.881529 [info ] [MainThread]: Found 585 macros
+[0m11:35:50.882037 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'e17833d6-d251-4c8f-948d-365a7a3d29af', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023E228E9E20>]}
+[0m11:35:50.883042 [info ] [MainThread]: 
+[0m11:35:50.884042 [warn ] [MainThread]: Nothing to do. Try checking your model configs and model specification args
+[0m11:35:50.887045 [debug] [MainThread]: Command end result
+[0m11:35:51.025503 [debug] [MainThread]: Command `dbt run` succeeded at 11:35:51.025503 after 2.33 seconds
+[0m11:35:51.026501 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023E235D52E0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023E1FEBC380>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023E36577170>]}
+[0m11:35:51.027502 [debug] [MainThread]: Flushing usage events
+[0m11:39:27.401414 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001980D416E70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001980D415220>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001980D417A70>]}
+
+
+============================== 11:39:27.406924 | 5f92b429-b065-4637-8066-e49f88e1e413 ==============================
+[0m11:39:27.406924 [info ] [MainThread]: Running with dbt=1.8.4
+[0m11:39:27.407924 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'debug': 'False', 'log_path': 'C:\\Users\\caiqu\\Workspace\\galderma\\logs', 'profiles_dir': 'C:\\Users\\caiqu\\.dbt', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt run', 'introspect': 'True', 'static_parser': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m11:39:27.585633 [debug] [MainThread]: Spark adapter: Setting pyhive.hive logging to ERROR
+[0m11:39:27.587617 [debug] [MainThread]: Spark adapter: Setting thrift.transport logging to ERROR
+[0m11:39:27.587617 [debug] [MainThread]: Spark adapter: Setting thrift.protocol logging to ERROR
+[0m11:39:29.586683 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '5f92b429-b065-4637-8066-e49f88e1e413', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001980D442F60>]}
+[0m11:39:29.659621 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '5f92b429-b065-4637-8066-e49f88e1e413', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001980C6E00B0>]}
+[0m11:39:29.661010 [info ] [MainThread]: Registered adapter: databricks=1.8.4
+[0m11:39:29.677896 [debug] [MainThread]: checksum: 54398663eddc8e4ac172fdab397e09b2aa6984947a84e6ec7983096c3fae7b7a, vars: {}, profile: , target: , version: 1.8.4
+[0m11:39:29.857508 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m11:39:29.857508 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m11:39:29.858507 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.gaderma_dbt_project
+[0m11:39:29.870768 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '5f92b429-b065-4637-8066-e49f88e1e413', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001981FF63F80>]}
+[0m11:39:29.979027 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '5f92b429-b065-4637-8066-e49f88e1e413', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001982016A390>]}
+[0m11:39:29.980014 [info ] [MainThread]: Found 585 macros
+[0m11:39:29.980014 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '5f92b429-b065-4637-8066-e49f88e1e413', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001981FE01E20>]}
+[0m11:39:29.984461 [info ] [MainThread]: 
+[0m11:39:29.985476 [warn ] [MainThread]: Nothing to do. Try checking your model configs and model specification args
+[0m11:39:29.988461 [debug] [MainThread]: Command end result
+[0m11:39:30.146719 [debug] [MainThread]: Command `dbt run` succeeded at 11:39:30.146719 after 2.95 seconds
+[0m11:39:30.149227 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001980D123C50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001981FEA9610>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001980D20F320>]}
+[0m11:39:30.150503 [debug] [MainThread]: Flushing usage events
+[0m11:42:30.817960 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000204A2830440>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000204A4A67BF0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000204A46473E0>]}
+
+
+============================== 11:42:30.823013 | f6434863-b108-439c-928b-740b9d523ee6 ==============================
+[0m11:42:30.823013 [info ] [MainThread]: Running with dbt=1.8.4
+[0m11:42:30.824212 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\caiqu\\.dbt', 'fail_fast': 'False', 'warn_error': 'None', 'log_path': 'C:\\Users\\caiqu\\Workspace\\galderma\\logs', 'debug': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'invocation_command': 'dbt run', 'static_parser': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m11:42:30.989626 [debug] [MainThread]: Spark adapter: Setting pyhive.hive logging to ERROR
+[0m11:42:30.990631 [debug] [MainThread]: Spark adapter: Setting thrift.transport logging to ERROR
+[0m11:42:30.991632 [debug] [MainThread]: Spark adapter: Setting thrift.protocol logging to ERROR
+[0m11:42:32.753727 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'f6434863-b108-439c-928b-740b9d523ee6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000204A4E01BE0>]}
+[0m11:42:32.836563 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'f6434863-b108-439c-928b-740b9d523ee6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000204A195B890>]}
+[0m11:42:32.837563 [info ] [MainThread]: Registered adapter: databricks=1.8.4
+[0m11:42:32.853746 [debug] [MainThread]: checksum: 54398663eddc8e4ac172fdab397e09b2aa6984947a84e6ec7983096c3fae7b7a, vars: {}, profile: , target: , version: 1.8.4
+[0m11:42:33.008654 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m11:42:33.009646 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m11:42:33.010646 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.gaderma_dbt_project
+[0m11:42:33.023099 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'f6434863-b108-439c-928b-740b9d523ee6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000204B8007F50>]}
+[0m11:42:33.133587 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'f6434863-b108-439c-928b-740b9d523ee6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000204B7FD9DC0>]}
+[0m11:42:33.134589 [info ] [MainThread]: Found 585 macros
+[0m11:42:33.135592 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'f6434863-b108-439c-928b-740b9d523ee6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000204B7D81340>]}
+[0m11:42:33.137594 [info ] [MainThread]: 
+[0m11:42:33.138592 [warn ] [MainThread]: Nothing to do. Try checking your model configs and model specification args
+[0m11:42:33.142603 [debug] [MainThread]: Command end result
+[0m11:42:33.280794 [debug] [MainThread]: Command `dbt run` succeeded at 11:42:33.279786 after 2.63 seconds
+[0m11:42:33.280794 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000204A195BEF0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000204B7FB4CE0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000204A551DE50>]}
+[0m11:42:33.281793 [debug] [MainThread]: Flushing usage events
+[0m11:43:15.965112 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021C8D995DF0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021C8D997C80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021C8D9979E0>]}
+
+
+============================== 11:43:15.972165 | d0beb6c9-6164-4921-98ad-1a9224c2af4b ==============================
+[0m11:43:15.972165 [info ] [MainThread]: Running with dbt=1.8.4
+[0m11:43:15.973131 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\caiqu\\.dbt', 'fail_fast': 'False', 'version_check': 'True', 'log_path': 'C:\\Users\\caiqu\\Workspace\\galderma\\logs', 'debug': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt test', 'log_format': 'default', 'static_parser': 'True', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m11:43:16.126076 [debug] [MainThread]: Spark adapter: Setting pyhive.hive logging to ERROR
+[0m11:43:16.127076 [debug] [MainThread]: Spark adapter: Setting thrift.transport logging to ERROR
+[0m11:43:16.128075 [debug] [MainThread]: Spark adapter: Setting thrift.protocol logging to ERROR
+[0m11:43:17.741388 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'd0beb6c9-6164-4921-98ad-1a9224c2af4b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021CA0091CD0>]}
+[0m11:43:17.809900 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'd0beb6c9-6164-4921-98ad-1a9224c2af4b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021C8D9C7140>]}
+[0m11:43:17.810910 [info ] [MainThread]: Registered adapter: databricks=1.8.4
+[0m11:43:17.826602 [debug] [MainThread]: checksum: 54398663eddc8e4ac172fdab397e09b2aa6984947a84e6ec7983096c3fae7b7a, vars: {}, profile: , target: , version: 1.8.4
+[0m11:43:17.981639 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m11:43:17.982636 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m11:43:17.983635 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.gaderma_dbt_project
+[0m11:43:17.992641 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'd0beb6c9-6164-4921-98ad-1a9224c2af4b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021CA0673F80>]}
+[0m11:43:18.217910 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'd0beb6c9-6164-4921-98ad-1a9224c2af4b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021CA07BB8F0>]}
+[0m11:43:18.218565 [info ] [MainThread]: Found 585 macros
+[0m11:43:18.219420 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'd0beb6c9-6164-4921-98ad-1a9224c2af4b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021CA05DB410>]}
+[0m11:43:18.221587 [info ] [MainThread]: 
+[0m11:43:18.222585 [warn ] [MainThread]: Nothing to do. Try checking your model configs and model specification args
+[0m11:43:18.226619 [debug] [MainThread]: Command end result
+[0m11:43:18.263252 [debug] [MainThread]: Command `dbt test` succeeded at 11:43:18.263252 after 2.43 seconds
+[0m11:43:18.264253 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021C8D78D640>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021CA005B320>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021CA03CADB0>]}
+[0m11:43:18.265255 [debug] [MainThread]: Flushing usage events
+[0m11:43:34.213472 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002033C776630>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020338F3C110>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002033C053320>]}
+
+
+============================== 11:43:34.218480 | 681b17fa-c6b9-443c-a6c1-0dae3ed31962 ==============================
+[0m11:43:34.218480 [info ] [MainThread]: Running with dbt=1.8.4
+[0m11:43:34.220014 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\caiqu\\.dbt', 'log_path': 'C:\\Users\\caiqu\\Workspace\\galderma\\logs', 'debug': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'introspect': 'True', 'invocation_command': 'dbt compile', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m11:43:34.390375 [debug] [MainThread]: Spark adapter: Setting pyhive.hive logging to ERROR
+[0m11:43:34.391369 [debug] [MainThread]: Spark adapter: Setting thrift.transport logging to ERROR
+[0m11:43:34.392384 [debug] [MainThread]: Spark adapter: Setting thrift.protocol logging to ERROR
+[0m11:43:36.103515 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '681b17fa-c6b9-443c-a6c1-0dae3ed31962', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002034F0E9CD0>]}
+[0m11:43:36.183836 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '681b17fa-c6b9-443c-a6c1-0dae3ed31962', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002033C7764E0>]}
+[0m11:43:36.184838 [info ] [MainThread]: Registered adapter: databricks=1.8.4
+[0m11:43:36.198515 [debug] [MainThread]: checksum: 54398663eddc8e4ac172fdab397e09b2aa6984947a84e6ec7983096c3fae7b7a, vars: {}, profile: , target: , version: 1.8.4
+[0m11:43:36.351258 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m11:43:36.352251 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m11:43:36.353253 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.gaderma_dbt_project
+[0m11:43:36.365129 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '681b17fa-c6b9-443c-a6c1-0dae3ed31962', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002034F42FCB0>]}
+[0m11:43:36.459024 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '681b17fa-c6b9-443c-a6c1-0dae3ed31962', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002034F63A600>]}
+[0m11:43:36.459024 [info ] [MainThread]: Found 585 macros
+[0m11:43:36.460022 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '681b17fa-c6b9-443c-a6c1-0dae3ed31962', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002034F566FC0>]}
+[0m11:43:36.463024 [info ] [MainThread]: 
+[0m11:43:36.463024 [warn ] [MainThread]: Nothing to do. Try checking your model configs and model specification args
+[0m11:43:36.467048 [debug] [MainThread]: Command end result
+[0m11:43:36.598110 [debug] [MainThread]: Command `dbt compile` succeeded at 11:43:36.597109 after 2.53 seconds
+[0m11:43:36.598110 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002033C607B00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002033B8CB8F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002033B8CA7E0>]}
+[0m11:43:36.599110 [debug] [MainThread]: Flushing usage events

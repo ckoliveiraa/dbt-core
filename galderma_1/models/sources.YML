@@ -1,0 +1,11 @@
+version: 2
+
+sources:
+  - name: db
+    description: 'DESCRICAO DO BANCO DE DADOS'
+    schema: bra_bronze
+    tables:
+      - name: magento_customer_bonus
+ 
+
+      

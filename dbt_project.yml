@@ -1,0 +1,11 @@
+name: 'galderma_1'
+version: '1.0'
+config-version: 2
+ 
+profile: 'galderma_1'
+ 
+model-paths: ["models"]
+ 
+models:
+  gaderma_dbt_project:
+    +schema: bra_bronze

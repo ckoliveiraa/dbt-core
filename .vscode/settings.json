@@ -1,0 +1,14 @@
+{
+    "sqltools.connections": [
+        {
+            "connectionMethod": "Hostname and Token",
+            "catalog": "hive_metastore",
+            "previewLimit": 50,
+            "driver": "Databricks",
+            "host": "adb-6854250478934132.12.azuredatabricks.net",
+            "path": "/sql/protocolv1/o/6854250478934132/0818-164411-hyqkty7h",
+            "schema": "bra_bronze",
+            "name": "Databricks"
+        }
+    ]
+}
