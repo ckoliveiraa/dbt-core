@@ -6,6 +6,7 @@ sources:
     schema: bra_bronze
     tables:
       - name: magento_customer_bonus
+      - name: magento_magento_rma_grid
  
 
       
