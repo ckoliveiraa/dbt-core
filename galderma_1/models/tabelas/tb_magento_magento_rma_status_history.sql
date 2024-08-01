@@ -1,5 +1,5 @@
 with source as (
-      select * from {{ source('db', 'magento_bonus_quantity_ratio') }}
+      select * from {{ source('db', 'magento_magento_rma_status_history') }}
 ),
 renamed as (
     select

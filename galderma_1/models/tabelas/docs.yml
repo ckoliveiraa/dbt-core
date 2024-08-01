@@ -1,0 +1,109 @@
+models:
+  - name: tb_magento_catalog_product_entity
+    columns:
+      - name: id
+        description: O identificador exclusivo de cada produto no catálogo do Magento.
+          Trata-se de um valor inteiro que é gerado automaticamente pelo sistema
+          quando um novo produto é adicionado.
+        data_type: int
+        tests:
+          - not_null
+          - unique
+        quote: true
+      - name: sku
+        description: A SKU (Stock Keeping Unit, unidade de manutenção de estoque)
+          associada a cada produto. Esse é um código alfanumérico exclusivo
+          usado para identificar e rastrear itens de estoque. A SKU é atribuída
+          pelo usuário quando o produto é criado no sistema Magento.
+        data_type: string
+        quote: true
+      - name: name
+        description: O nome do produto como ele aparece no catálogo do Magento. Esse é
+          um valor de cadeia de caracteres atribuído pelo usuário quando o
+          produto é criado. O nome é usado para fins de exibição no site e em
+          outros materiais voltados para o cliente.
+        data_type: string
+        quote: true
+      - name: attribute_set_id
+        description: Essa coluna representa o identificador exclusivo do conjunto de
+          atributos associados a um produto. É um valor inteiro e é gerado
+          automaticamente pelo sistema quando um novo conjunto de atributos é
+          criado.
+        data_type: int
+        quote: true
+      - name: price
+        description: Essa coluna representa o preço do produto. É um valor numérico e é
+          definido pelo usuário ao criar ou atualizar um produto no catálogo do
+          Magento.
+        data_type: double
+        quote: true
+      - name: status
+        description: 'Essa coluna representa o status do produto. É um valor de cadeia
+          de caracteres e pode ter dois valores possíveis: "ativo" ou "inativo".
+          Um status "ativo" significa que o produto está disponível para compra,
+          enquanto um status "inativo" significa que o produto não está
+          disponível para compra.'
+        data_type: int
+        quote: true
+      - name: type_id
+        description: A coluna "type_id" representa o tipo do produto. Esse é um
+          identificador exclusivo que é usado para categorizar o produto no
+          catálogo do Magento.
+        data_type: string
+        tests:
+          - unique
+          - not_null
+        quote: true
+      - name: created_at
+        description: A coluna "created_at" representa o registro de data e hora em que o
+          produto foi adicionado pela primeira vez ao catálogo do Magento. Isso
+          é registrado no fuso horário UTC.
+        data_type: timestamp
+        quote: true
+      - name: updated_at
+        description: A coluna "updated_at" representa o registro de data e hora da
+          atualização mais recente feita no produto no catálogo do Magento. Isso
+          também é registrado no fuso horário UTC.
+        data_type: timestamp
+        quote: true
+      - name: options
+        description: Essa coluna contém as várias opções disponíveis para um determinado
+          produto. As opções podem incluir diferentes tamanhos, cores ou outros
+          recursos personalizáveis que o produto oferece.
+        data_type: string
+        quote: true
+      - name: tier_prices
+        description: Essa coluna contém as informações de preço escalonado de um
+          produto. O preço escalonado é uma ferramenta promocional que vende um
+          produto a preços diferentes com base na quantidade adquirida pelo
+          comprador.
+        data_type: string
+        quote: true
+      - name: multiplier_factor
+        description: Essa coluna contém o fator multiplicador de um produto. Esse fator
+          é usado em cálculos relacionados ao produto, como a determinação de
+          descontos ou preços promocionais.
+        data_type: int
+        quote: true
+      - name: input_file
+        description: Essa coluna representa o nome do arquivo de entrada do qual os
+          dados foram extraídos. É uma coluna do tipo string e pode ser usada
+          para rastrear a origem dos dados.
+        data_type: string
+        quote: true
+      - name: dt_processing
+        description: Essa coluna representa o registro de data e hora em que os dados
+          foram processados. É uma coluna do tipo carimbo de data/hora e pode
+          ser usada para entender quando os dados foram atualizados ou
+          processados pela última vez.
+        data_type: timestamp
+        quote: true
+    description: O modelo tb_magento_catalog_product_entity é uma tabela que contém
+      informações sobre os produtos no catálogo do Magento. Ela inclui colunas
+      para o ID do produto, SKU, nome, ID do conjunto de atributos, preço,
+      status, ID do tipo, registros de data e hora de criação e atualização,
+      opções, preços de nível, fator multiplicador, arquivo de entrada e
+      registro de data e hora de processamento. Os dados são obtidos da tabela
+      `hive_metastore`.`bra_bronze`.`magento_catalog_product_entity` e são
+      distintos. Esse modelo é útil para entender os detalhes de cada produto no
+      catálogo do Magento, incluindo seu preço, status e outros atributos.

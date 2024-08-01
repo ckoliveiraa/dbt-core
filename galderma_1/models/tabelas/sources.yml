@@ -1,0 +1,46 @@
+version: 2
+
+sources:
+  - name: db
+    description: 'DESCRICAO DO BANCO DE DADOS'
+    schema: bra_bronze
+    tables:
+      - name: magento_bonus_quantity_ratio
+      - name: magento_catalog_product_entity
+        description: galderma_1\docs.yml
+      - name: magento_company_team
+      - name: magento_customer_bonus
+      - name: magento_customer_entity 
+      - name: magento_customer_group
+      - name: magento_customer_group_special_condition
+      - name: magento_galderma_hierarchy_flat
+      - name: magento_galderma_occurrence_additional_info
+      - name: magento_galderma_occurrence_approver
+      - name: magento_galderma_pre_order
+      - name: magento_galderma_pre_order_families_data
+      - name: magento_galderma_quote_distributor
+      - name: magento_galderma_territory_quota
+      - name: magento_inventory_source
+      - name: magento_landing_zone_summary_log
+      - name: magento_magento_rma_grid
+      - name: magento_magento_rma_status_history
+      - name: magento_product_balance_extension
+      - name: magento_purchase_order
+      - name: magento_quote
+      - name: magento_quote_address
+      - name: magento_quote_item
+      - name: magento_quote_payment
+      - name: magento_representative_behalf_order
+      - name: magento_representative_quota_flat
+
+
+
+
+
+
+
+
+
+ 
+
+      
