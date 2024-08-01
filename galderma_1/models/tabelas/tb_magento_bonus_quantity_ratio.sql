@@ -7,11 +7,8 @@
 
 with base as (
     select * 
-    from {{ source('db', 'magento_magento_rma_grid') }}
+    from {{ source('db', 'magento_bonus_quantity_ratio') }}
 )
 
 select distinct *
 from base
-
-
-magento_bonus_quantity_ratio

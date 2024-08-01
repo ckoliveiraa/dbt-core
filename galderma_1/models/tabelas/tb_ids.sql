@@ -1,1 +1,0 @@
-select customer_id from {{ref('tb_magento_customer_bonus')}}
