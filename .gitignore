@@ -1,1 +1,9 @@
 .venv/
+<<<<<<< Updated upstream
+venv/
+../venv/
+/venv/
+=======
+../venv/
+/venv/
+>>>>>>> Stashed changes

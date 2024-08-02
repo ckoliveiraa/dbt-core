@@ -3,6 +3,11 @@ target/
 dbt_packages/
 logs/
 venv/
+<<<<<<< Updated upstream
 venv/
 ../venv/
 /venv/
+=======
+../venv/
+/venv/
+>>>>>>> Stashed changes

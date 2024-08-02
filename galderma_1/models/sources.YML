@@ -7,6 +7,33 @@ sources:
     tables:
       - name: magento_customer_bonus
       - name: magento_magento_rma_grid
+      - name: magento_sales_invoice
+      - name: magento_sales_order
+      - name: magento_sales_order_address
+      - name: magento_sales_order_item
+      - name: magento_sales_order_payment
+      - name: magento_sales_order_status_history
+      - name: magento_salesrule
+      - name: salesforce_account
+      - name: salesforce_address_vod__c
+      - name: salesforce_approved_document_vod__c
+      - name: salesforce_call2_vod__c
+      - name: salesforce_child_account_vod__c
+      - name: salesforce_event_attendee_vod__c
+      - name: salesforce_mc_cycle_plan_target_vod__c
+      - name: salesforce_mc_cycle_plan_vod__c
+      - name: salesforce_medical_event_vod__c
+      - name: salesforce_message_registration__c
+      - name: salesforce_product_vod__c
+      - name: salesforce_question_response_vod__c
+      - name: salesforce_sample_lot_vod__c
+      - name: salesforce_sample_transaction_vod__c
+      - name: salesforce_sent_content__c
+      - name: salesforce_sent_email_vod__c
+      - name: salesforce_survey_target_vod__c
+      - name: salesforce_time_off_territory_vod__c
+      - name: salesforce_tsf_vod__c
+      - name: salesforce_user
  
 
-      
+      # git remote set-url origin https://<your-token>@github.com/ckoliveiraa/dbt-core.git

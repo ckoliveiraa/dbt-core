@@ -1,1 +1,7 @@
-select * from {{source('db','magento_customer_bonus')}} limit 10
+with base as (
+    select * 
+    from {{ source('db', 'magento_customer_bonus') }}
+)
+
+select distinct *
+from base
